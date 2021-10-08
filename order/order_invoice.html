@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <style type="text/css">
+            body {
+                font-size: 14px;
+            }
+
+            tr.head td,
+            tr.footer td {
+                padding-top: 10px;
+                padding-bottom: 10px;
+                font-size: 18px;
+                font-weight: bold;
+                background-color: #f9f9f9;
+            }
+
+            tr.footer td {
+                font-size: 14px;
+            }
+
+            tr.item td {
+                padding-top: 3px;
+                padding-bottom: 3px;
+                font-size: 14px;;
+            }
+        </style>
+    </head>
+
+    <body>
+        <div class="wrapper">
+            <h1>Invoice #{{ order.unique_order_id }}</h1>
+
+            <h2>BILL TO</h2>
+
+            <p>
+                {{ order.shipping.first_name }} {{ order.shipping.last_name }}<br>
+                {{ order.shipping.address_one }}<br>
+                {{ order.shipping.zip_code }}
+                {{ order.shipping.city }}
+                {{ order.customer.country_code }} {{ order.customer.phone }} <br>
+                {{ order.customer.user.email }}
+            </p> <br>
+
+            <h2>ORDER ID</h2>
+            <p> #{{order.unique_order_id }}</p>
+
+            <h2> ORDER DATE </h2>
+            <p> {{ order.created_at }}</p>
+
+            <table cellpadding="0" cellspacing="0" width="100%">
+                <tr>
+                    <td >PRODUCT</td>
+                    <td>QUANTITY</td>
+                    <td>UNIT COST</td>
+                    <td>AMOUNT</td>
+                </tr>
+                {% for item in order_items.all %}
+                    <tr>
+                        <td> {{ item.product.title }}</td>
+                        <td>{{ item.quantity }}</td>
+                        <td>{{ item.price }}</td>
+                        <td>${{ item.price }}</td>
+                    </tr>
+                {% endfor %}
+                <tr>
+                    <td ></td>
+                    <td></td>
+                    <td>SUBTOTAL</td>
+                    <td> ${{ order.sub_total }}</td>
+                </tr>
+                 <tr>
+                    <td ></td>
+                    <td></td>
+                    <td>DISCOUNT</td>
+                    <td> ${{ order.discount }}</td>
+                </tr> <br> </br>
+                 <tr>
+                    <td ></td>
+                    <td></td>
+                    <td>TAX</td>
+                    <td> ${{ order.tax }}</td>
+                </tr> <br> </br>
+                <tr>
+                    <td ></td>
+                    <td></td>
+                    <td>TOTAL</td>
+                    <td> ${{ order.total_amount }}</td>
+                </tr>
+
+            </table>
+             <br> </br>
+        </div>
+    </body>
+</html>

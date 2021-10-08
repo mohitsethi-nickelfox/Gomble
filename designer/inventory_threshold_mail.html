@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html charset=UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    @media (max-width: 428px) {
+      .logo-image {
+          width: 80px !important;
+      }
+    }
+    @media (max-width: 768px) {
+      .logo-image {
+          width: 100px !important;
+      }
+    }
+  </style>
+</head>
+
+
+<body>
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <td align="center">
+        <table class="main" width="650" cellspacing="0" cellpadding="15" border="0">
+          <tr>
+            <td align="center">
+              <table width="110" border="0" cellspacing="0" cellpadding="0">
+                <tr>
+                  <td>
+                    <img class="logo-image"
+                      src="https://gomble-public-icons.s3.amazonaws.com/default_icons/Gomble_fashion_banner_large.png"
+                      alt="Gomble Invite Image" style="display: block; width: 100%;">
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td>
+              <table width="100%" cellspacing="0" cellpadding="10" border="0" style="border: 2px solid #DDDDDD;">
+                <tr>
+                  <td>
+                    <table width="100%" cellspacing="0" cellpadding="10" border="0">
+                      <tr>
+                        <td>
+                          <span
+                            style="font-size: 16px; font-family: 'Inter', sans-serif;  color:#2A2A2A; font-weight: 600;">Dear
+                            {{ name }},</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td></td>
+                      </tr>
+<!--                      <tr>-->
+<!--                        <td>-->
+<!--                          <span style="font-size: 16px; font-family: 'Inter', sans-serif;  color:#2A2A2A;">Greetings-->
+<!--                            from Gomble Fashion! </span>-->
+<!--                        </td>-->
+<!--                      </tr>-->
+                      <tr>
+                        <td>
+                          <span style="font-size: 16px; font-family: 'Inter', sans-serif;  color:#2A2A2A;">This is with reference to your product id: <b>{{ product_id }}</b>, your Inventory for  this product has fallen below the threshold quantity.  Please update it immediately so to enjoy continued Profits.
+                          <br>
+                          <br>
+                          <b>Your Product details is as follow:</b> 
+                          <ul>
+                          <li>Product : {{ product_name }}</li>
+                          <li>Variant : {{ variant_name }}</li>
+                          <li>Price: {{ product_price }}</li>
+                          <li>Quantity: {{ product_price }}</li>
+                          </ul>
+                            </span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <span style="font-size: 16px; font-family: 'Inter', sans-serif;  color:#2A2A2A;"> 
+                            You can update these product detail by Logging into your account:</span>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <a href="{{ url }}"
+                            style="font-weight: 600; width: 250px; height: 50px; line-height: 50px; display: block; text-decoration: none; background: #FFCE70; border-radius: 4px; color: #0F0532; text-align: center;font-size: 14px; font-family: 'Inter', sans-serif;">
+                            CLICK HERE TO LOGIN
+                          </a>
+                        </td>
+                      </tr>
+
+                    </table>
+                  </td>
+                </tr>
+                <tr>
+                  <td>
+                    <table width="100%" border="0" cellspacing="0" cellpadding="12">
+                      <tr>
+                        <td>
+                          <table>
+                            <tr>
+                              <td>
+                                <span
+                                  style="font-size: 16px; font-family: 'Inter', sans-serif; color:#2A2A2A; font-weight: 600;">Regards,</span>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <span style="font-size: 16px; font-family: 'Inter', sans-serif;  color:#2A2A2A;">
+                                  Gomble Fashion Team
+
+                                  <br>
+                                  <br>
+                                  <br>
+                                  <br>
+                                  <small>***This is a system generated Email. Please do not reply to this Email***</small>
+                                  <br>
+                                  <small>If you are not the right person to receive this email, Please ignore</small>
+                              </span>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <table width="100%" border="0" cellspacing="0" cellpadding="2">
+                <tr>
+                  <td align="center">
+                    <span style="font-size: 16px; font-family: 'Inter', sans-serif;  color:#949494;"> &#169; 2021
+                      Gomble Fashion. All Rights Reserved.</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <span style="font-size: 16px; font-family: 'Inter', sans-serif;  color:#949494;">line1
+                      line1, lan2, line3, country</span>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="center">
+                    <span style="font-size: 16px; font-family: 'Inter', sans-serif;  color:#949494;"><a href="#"
+                        style="color:#949494; text-decoration: none;">Privacy Policy</a> | <a href="#"
+                        style="color:#949494; text-decoration: none;">Terms and Conditions</a> | <a href="#"
+                        style="color:#949494; text-decoration: none;">Unsubscribe</a></span>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr>
+            <td align="center">
+              <table border="0" cellspacing="0" cellpadding="15">
+                <tr>
+                  <td>
+                    <a href="#">
+                      <img
+                        src="https://gomble-public-icons.s3.amazonaws.com/social_media_icons/facebook.281c7342.svg"
+                        style="display: block; width: 24px;">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#">
+                      <img
+                        src="https://gomble-public-icons.s3.amazonaws.com/social_media_icons/instagram.3694257a.svg"
+                        style="display: block; width: 24px;">
+                    </a>
+                  </td>
+                  <td>
+                    <a href="#">
+                      <img
+                        src="https://gomble-public-icons.s3.amazonaws.com/social_media_icons/twitter.a7703c39.svg"
+                        style="display: block; width: 24px;">
+                    </a>
+                  </td>
+                </tr>
+              </table>
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+  </table>
+</body>
+
+</html>
